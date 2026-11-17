@@ -1,0 +1,27 @@
+name: Daily Claim & Gift
+
+on:
+  schedule:
+    # Run daily at 00:30 UTC (08:30 Singapore time)
+    - cron: '30 0 * * *'
+  workflow_dispatch:  # Allow manual trigger
+
+jobs:
+  claim-and-gift:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          playwright install chromium
+          playwright install-deps chromium
+
+      - name: Run claim and gift
+        run: python claim_and_gift.py
