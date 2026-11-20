@@ -1,6 +1,6 @@
-# BluffKing Daily Claim & Gift
+# BluffKing Daily Bean Claims
 
-Automatically claims recovery beans and gifts all available gold beans to 克劳德.
+For each configured account, the script claims eligible recovery beans and the daily subsidy. The GitHub Actions log shows each reward separately and the final available balance.
 
 ## Daily Schedule
 
@@ -16,6 +16,5 @@ python claim_and_gift.py
 
 ## Notes
 
-- Correctly parses `Available 2,180` style balances (with commas).
-- Gifts only if balance >= 10.
+- Each reported credit is matched to a new wallet history entry. Disabled claims show zero and the reason from the wallet. An unverified claim is marked for review.
 - Password is currently hardcoded; consider using GitHub Secrets for production.
