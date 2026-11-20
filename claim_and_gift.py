@@ -11,6 +11,9 @@ ACCOUNTS = [
     ("erikzhang0513@gmail.com", "新加坡夜宵博士"),
     ("happyerik0513@gmail.com", "抖腿的chris"),
     ("erikcchatgptup@gmail.com", "暴走的橘猫掌门"),
+    ("qiuchunhappy@gmail.com", "旺旺"),
+    ("bluffking01@tutamail.com", "成都mason"),
+    ("bluffking02@tutamail.com", "小号土豆骑士"),
 ]
 PASSWORD = "Qc111111"
 
